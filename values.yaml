@@ -1311,9 +1311,12 @@ concourse:
     externalGardenUrl:
 
     garden:
-      ## Path to the 'gdn' executable (or leave as 'gdn' to find it in $PATH)
+      ## Path to the executable to run the garden backend ('gdn' or
+      ## 'containerd').
       ##
-      bin: gdn
+      ## If not specified, the right binary will be search in $PATH.
+      ##
+      bin:
 
       ## Path to a config file to use for Garden in INI format.
       ##
@@ -1334,6 +1337,10 @@ concourse:
       ## Use the insecure Houdini Garden backend.
       ##
       useHoudini:
+
+      ## Use the experimental containerd garden backend.
+      ##
+      useContainerd:
 
       ## How long to wait for requests to Garden to complete. 0 means no timeout.
       ##
