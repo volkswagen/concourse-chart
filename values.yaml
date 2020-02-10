@@ -1314,7 +1314,7 @@ concourse:
       ## Path to the executable to run the garden backend ('gdn' or
       ## 'containerd').
       ##
-      ## If not specified, the right binary will be search in $PATH.
+      ## If not specified, Concourse will search $PATH for the right binary.
       ##
       bin:
 
