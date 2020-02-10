@@ -14,3 +14,10 @@
 # v9.0.0:
 
 - changed the input format for `concourse.web.auth.mainTeam.config`. Previously you would pass the path to a YAML file that contained the team config. This variable now expects the contents of a YAML file. The chart will then create a `ConfigMap` and store the contents of the `mainTeam.config` key in `main-team.yml`.
+
+# v10.0.0:
+
+- remove `concourse.web.enableLidar`: `lidar` is now the only way of find and check resources
+- remove `concourse.web.noop`: with the introduction of component tracking, there's no need for `noop` anymore
+- remove `concourse.web.maxConns`: in favor of `concourse.web.apiMaxConns` and `concourse.web.backendMaxConns`
+
